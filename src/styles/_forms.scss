@@ -1,0 +1,23 @@
+.Label {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+::-webkit-input-placeholder {
+  color: #999;
+}
+
+:-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #999;
+}

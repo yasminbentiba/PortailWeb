@@ -1,0 +1,57 @@
+@import '../styles/constants';
+@import '../styles/colors';
+@import '../styles/fonts';
+
+.SideMenu {
+
+  &.open {
+    left: 0;
+  }
+
+  &.open {
+    right: 0;
+  }
+
+  background: $gray-6;
+  transition: all 500ms;
+  position: fixed;
+  top: $header-height;
+  bottom: 0;
+  color: white;
+  width: 250px;
+  padding-top: $gutter*.5;
+  z-index: 20;
+
+  .menuTitle {
+    @extend .fs-small;
+    @extend .all-caps;
+    padding: $gutter*.5 $gutter;
+    color: $gray-3;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li.menuItem {
+    margin: 0;
+    list-style: none;
+
+    a {
+      color: white;
+      padding: $gutter*.7 $gutter;
+      display: block
+    }
+    a:hover {
+      color: $gray-3;
+      background: rgba(0, 0, 0, .2);
+
+      border: none
+    }
+
+    &:not(:last-child) {
+      border-bottom: 2px solid rgba(0, 0, 0, .2)
+    }
+  }
+}

@@ -1,0 +1,78 @@
+
+@import "forms";
+@import "buttons";
+@import "links";
+@import "messages";
+@import "icons";
+@import "tags";
+
+* {
+  box-sizing: border-box;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.mini-label {
+  @extend .fs-small;
+  @extend .fw-semibold;
+  text-transform: uppercase;
+  color: $gray-4
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: $gray-1;
+  margin: $gutter*.6 0 $gutter*.5
+}
+
+.help {
+  @extend .fs-medium;
+  color: $gray-3;
+
+  &.error {
+    color: $red
+  }
+}
+
+.EmptyList {
+  margin: $gutter*2 0;
+  font-style: italic;
+  text-align: center;
+  color: $gray-4
+}
+
+.card {
+  margin: $gutter;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  background: white;
+  border-radius: $border-radius;
+  padding: $gutter*.8 $gutter $gutter $gutter;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: $gutter;
+  border-top: 1px solid $gray-2;
+  border-bottom: 1px solid $gray-2;
+  background: white;
+
+  .listTitle {
+    align-self: center;
+    font-family: sans-serif;
+    display: inline-block;
+  }
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+
+  &>* {
+    flex-grow: 1
+  }
+}

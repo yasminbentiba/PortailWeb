@@ -1,0 +1,35 @@
+.tag {
+  @extend .fs-small;
+  @extend .fw-semibold;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  background: $gray-2;
+  color: $gray-5;
+  border-radius: 2px;
+  overflow: hidden;
+
+  &.with-counter {
+    padding: 0 8px 0 0;
+  }
+
+  &.white { background: white; color: $gray-3}
+  &.danger { background: $red; color: white; .fa, .material-icons {color: white} }
+  &.warning { background: $yellow; color: $gray-6; }
+  &.primary { background: $blue; color: white; .fa, .material-icons {color: white}  }
+  &.success { background: $green; color: white; .fa, .material-icons {color: white}  }
+
+  .counter {
+    background: rgba(0,0,0,.3);
+    border-radius: 2px;
+    margin-right: $gutter*.25;
+    padding: 2px 3px;
+    min-width: 18px;
+    display: inline-block;
+    text-align: center;
+    color: white;
+  }
+
+  &:not(:last-child) {
+    margin-right: $gutter*.25
+  }
+}

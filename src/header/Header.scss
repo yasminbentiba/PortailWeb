@@ -1,0 +1,71 @@
+
+.Header {
+  background: blue;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  flex-direction: row;
+  align-items: stretch;
+  position: fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  z-index: 30;
+  box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);
+  transition: all 500ms;
+  height: 80px;
+
+  .actionsContainer {
+    display: flex;
+    align-items: stretch;
+  }
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+  
+  .App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .App-title {
+    font-size: 1.5em;
+  }
+  
+  .App-intro {
+    font-size: large;
+  }
+  
+  .sideMenuButton {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    border-inline-end: 1px solid #5784EA;
+    transition: background 500ms;
+
+    &:hover {
+      background: blue
+    }
+
+    &.open {
+      background: red;
+
+      &:hover {
+        background: red
+      }
+    }
+  }
+  .menuIcon {
+    font-size: 36px;
+    color: white;
+  }
+
+  }
+

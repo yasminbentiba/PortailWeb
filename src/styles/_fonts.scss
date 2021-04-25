@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "./colors";
+
+
+.fw-regular { font-weight: 400}
+.fw-semibold { font-weight: 600}
+.fw-light { font-weight: 300}
+.fw-bold { font-weight: 700}
+
+.fs-huge { font-size: 32px; letter-spacing: -1px }
+.fs-bigger { font-size: 24px }
+.fs-big { font-size: 18px }
+.fs-default { font-size: 16px }
+.fs-medium { font-size: 12px }
+.fs-small { font-size: 10px }
+
+.muted { color: $gray-3 }
+.all-caps { text-transform: uppercase }
+.all-lower { text-transform: lowercase }
+
+.text-right { text-align: right }
+.text-left { text-align: left }
+.text-center { text-align: center }
+
+* {
+  @extend .fs-default;
+  @extend .fw-regular;
+  font-family: 'Source Sans Pro', 'sans-serif';
+  color: $gray-7
+}
+
+h1 { @extend .fw-light; font-size: 64px; }
+h2 { @extend .fw-light; font-size: 32px; }
+h3 { @extend .fw-light; font-size: 24px; }
+h4 { @extend .fw-semibold; font-size: 20px; }
+h5 { @extend .fw-semibold; font-size: 18px; }
+
+strong, span, em {
+  color: inherit;
+  font-size: inherit;
+}
+
+strong {
+  @extend .fw-bold
+}
+

@@ -1,0 +1,19 @@
+
+a {
+  text-decoration: none;
+  color: $blue;
+
+  &:hover {
+    color: $blue-dark;
+    border: none;
+    //border-bottom: 1px dotted $gray-3;
+  }
+
+  &.red {
+    color: $red;
+
+    &:hover {
+      color: $red-dark;
+    }
+  }
+}

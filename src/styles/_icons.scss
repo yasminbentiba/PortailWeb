@@ -1,0 +1,17 @@
+.material-icons {
+  color: inherit;
+
+  &.white {
+    color: white;
+  }
+
+  &.small {
+    font-size: 12px;
+  }
+
+  &.gray   { color: $gray-3}
+  &.blue   { color: $blue}
+  &.red    { color: $red}
+  &.yellow { color: $yellow}
+  &.green  { color: $green}
+}

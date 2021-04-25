@@ -1,0 +1,7 @@
+.table {
+  position: relative;
+  border: 1px solid #ddd;
+  tbody>tr>td {
+    vertical-align: middle;
+  }
+}

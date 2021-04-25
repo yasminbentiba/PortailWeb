@@ -1,0 +1,151 @@
+
+.button {
+  border-radius: 999px;
+  border: 0;
+  padding: $gutter*.5 $gutter*2;
+  outline: none;
+  background: $gray-2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $gray-5;
+
+  &.marginRight {
+    margin-right: $gutter*.5
+  }
+  &.marginLeft {
+    margin-left: $gutter*.5
+  }
+
+  &:hover, &:focus {
+    background: $gray-1
+  }
+
+  &:active {
+    background: $gray-3;
+    color: white
+  }
+
+  &.loading {
+    position: relative;
+    color: transparent !important;
+
+    &::after {
+      @extend .spin-around;
+      content: '';
+      width: 16px;
+      height: 16px;
+      border-color: white white transparent transparent;
+      border-width: 2px;
+      border-radius: 999px;
+      border-style: solid;
+      display: inline-block;
+      position: absolute;
+      top: calc(50% - 9px);
+      left: calc(50% - 8px);
+    }
+  }
+
+  & + .button {
+    margin-left: $gutter*.5;
+  }
+
+  &.full {
+    width: 100%;
+  }
+
+  &.white {
+    color: $blue-accent;
+    background: white;
+    &:hover, &:focus {
+      color: $blue-dark
+    }
+    &:active {
+      color: $blue-dark
+    }
+  }
+
+  &.primary {
+    color: white;
+    background: $blue-accent;
+    &:hover, &:focus {
+      background: $blue
+    }
+    &:active {
+      background: $blue-dark
+    }
+  }
+
+  &.success {
+    color: white;
+    background: $green;
+    &:hover, &:focus {
+      background: $green-dark
+    }
+    &:active {
+      background: $green-dark
+    }
+  }
+
+  &.danger {
+    color: white;
+    background: $red;
+    &:hover, &:focus {
+      background: $red-dark
+    }
+    &:active {
+      background: $red-dark
+    }
+  }
+
+  &.outline {
+    color: $blue-accent;
+    box-shadow: 0 0 0 2px $blue-accent;
+    background: transparent;
+    padding: $gutter*.5-2 $gutter*2-2;
+
+    &.loading::after {
+      border-color: $blue-accent $blue-accent transparent transparent;
+    }
+
+    &:hover, &:focus {
+      color: $blue-dark;
+      box-shadow: 0 0 0 2px $blue-dark;
+    }
+
+    &:active {
+      background: $blue-accent;
+      color: white;
+      box-shadow: 0 0 0 2px $blue-accent;
+    }
+
+    &.white {
+      &.loading::after {
+        border-color: white white transparent transparent;
+      }
+
+      box-shadow: 0 0 0 2px white;
+      color: white;
+
+      &:hover, &:focus {
+        box-shadow: 0 0 0 2px $gray-3;
+        color: $gray-3
+      }
+
+      &:active {
+        background: $blue-accent;
+        color: white;
+        box-shadow: 0 0 0 2px $blue-accent;
+      }
+    }
+  }
+
+  &.small {
+    @extend .fs-medium;
+    padding: $gutter*.40 $gutter
+  }
+
+  &[disabled] {
+    cursor: wait;
+  }
+}

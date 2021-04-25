@@ -1,0 +1,26 @@
+.message {
+  background    : $gray-1;
+  color         : $gray-5;
+  padding       : $gutter*.5 $gutter*.75;
+  border-radius : $border-radius;
+
+  &.warning {
+    background: $yellow-light;
+    color: $yellow-dark
+  }
+
+  &.danger {
+    background: $red-light;
+    color: $red-dark
+  }
+
+  &.danger {
+    background: $red-light;
+    color: $red-dark
+  }
+
+  &.info {
+    background: $blue-light;
+    color: $blue
+  }
+}

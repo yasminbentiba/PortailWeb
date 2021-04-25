@@ -1,0 +1,50 @@
+@import "constants";
+@import "colors";
+@import "fonts";
+@import "ui-elements";
+@import "animations";
+
+a {
+  cursor: pointer;
+}
+
+body {
+  background : $gray-1;
+}
+
+.content {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+}
+
+.pure-g {
+
+  &.vCenter {
+    align-items: center;
+  }
+
+  [class*=pure-u] {
+    padding-right: 10px;
+  }
+
+  [class*=pure-u]:last-child {
+    margin-right: -10px;
+    box-sizing: content-box;
+  }
+
+  &:not(:last-child) {
+    padding-bottom: 10px
+  }
+}
+
+.p-relative {
+  position: relative;
+}
+
+.AddressBox .mapContainer {
+  margin-top: 1.7em !important;
+}
+
+.zopim {
+  left: 50px !important;
+}
