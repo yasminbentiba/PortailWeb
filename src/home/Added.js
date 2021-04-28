@@ -12,6 +12,10 @@ class Added extends Component {
         this.props.editClicked();
     }
 
+    handleDesactivate = () => {
+        this.props.desactivateClicked();
+    }
+
 
     render() {
         return (
@@ -21,6 +25,13 @@ class Added extends Component {
                     onClick={this.handleEdit}
                 >
                     edit  <i className="material-icons small">edit</i>
+                </Button>
+
+                <Button
+                    block
+                    onClick={this.handleDesactivate}
+                >
+                    desactivate  <i className="material-icons small">desactivate</i>
                 </Button>
             </div>
 

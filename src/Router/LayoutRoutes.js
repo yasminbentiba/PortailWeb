@@ -3,10 +3,17 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Home from '../home/home';
 import Layout from '../Layout';
 import UsersTableCompnent from '../UsersTable/UsersTableCompnent';
+import Forum from "../Forum/forum";
+import contactForm from "../Contact/contactForm"
+
+
+
 
 import {
   HOME,
   USERSTABLE,
+  FORUM,
+  CONTACT
 } from './routes';
 
 const LayoutRoutes = () => (
@@ -14,6 +21,8 @@ const LayoutRoutes = () => (
     <Switch>
       <Route exact path={HOME.route} component={Home} />
       <Route exact path={USERSTABLE.route} component={UsersTableCompnent} />
+      <Route exact path={FORUM.route} component={Forum} />
+      <Route exact path={CONTACT.route} component={contactForm} />
       <Redirect to={HOME.route} />
     </Switch>
   </Layout>

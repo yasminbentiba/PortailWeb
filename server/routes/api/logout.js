@@ -26,6 +26,36 @@ module.exports = (app) => {
                 });
             }
         }); 
+
+
+
+
+
+        UserSession.desactivateAndUpdate({
+            _id: token,
+            isActivated: user.isActivated,
+        }, {
+            $set: {
+                isActivated: !user.isActivated,
+            }
+        }, null, (err) => {
+            if (err) {
+                return res.send({
+                    success: false,
+                    message: 'Error: Server Error',
+                });
+            } else {
+                return res.send({
+                    success: true,
+                    message: 'Logged Ou',
+                });
+            }
+        }); 
+
+
+
+
+
         
     });
 };

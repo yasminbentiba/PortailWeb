@@ -50,6 +50,25 @@
     border-inline-end: 1px solid #5784EA;
     transition: background 500ms;
 
+
+    .ul-list .list-item {
+      display: inline-block;
+  }
+  .ul-list {
+    width: 50%;
+    float: left;
+    list-style: none;
+    font-size: 16px;
+}
+.ul-list .list-item .liennavbar {
+  display: block;
+  color: #222;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+
     &:hover {
       background: blue
     }

@@ -9,7 +9,7 @@ module.exports = app => {
             _id: _id,
         }, {
             $set: {
-                name: 'rawia',
+                firstName: 'yasmine',
             }
         }, null, (err) => {
             if (err) {

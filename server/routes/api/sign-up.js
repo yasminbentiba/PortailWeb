@@ -41,6 +41,13 @@ module.exports = (app) => {
                     newUser.password = req.body.password; 
                     // newUser.generateHash(password);
                     newUser.name = req.body.name;
+                    newUser.firstName = req.body.firstName;
+                    newUser.lastName = req.body.lastName;
+                    newUser.url=req.body.url;
+                    newUser.role = req.body.role;
+                    newUser.atelierType = req.body.atelierType;
+                    newUser.isActivated=req.body.isActivated;
+
                     newUser.save((err, user) => {
                         if(err) {
                             return res.status(500).send({

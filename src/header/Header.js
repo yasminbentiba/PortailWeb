@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-
+import PersonAddOutlinedIcon from '@material-ui/icons/PersonAddOutlined';
+import { Avatar } from '@material-ui/core';
 import './Header.scss';
 
 class Header extends Component {
@@ -15,6 +16,8 @@ class Header extends Component {
 
     return (
       <div className={containerClasses}>
+                
+
         <div className="actionsContainer">
           <a className={iconClasses} onClick={onMenuIconClick}>
             <i className="material-icons white menuIcon">{isMenuOpen ? 'close' : 'menu'}</i>

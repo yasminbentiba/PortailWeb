@@ -13,6 +13,11 @@ const UserSessionSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    isActivated: {
+        type: Boolean,
+        default: true,
+    },
+
 });
 
 module.exports = mongoose.model('UserSession', UserSessionSchema);

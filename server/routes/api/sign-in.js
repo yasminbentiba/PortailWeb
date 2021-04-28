@@ -71,6 +71,8 @@ module.exports = (app) => {
                                 message: 'Valid sign in',
                                 token: doc._id,
                                 name: user.name,
+                                firstName : user.firstName,
+                                role : user.role,
                                 respId: 'LIS',
                             });
                         }

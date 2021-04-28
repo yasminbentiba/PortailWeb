@@ -16,7 +16,7 @@ class Tab extends Component {
           data={props.items}
           remote={true}
           bordered={false}
-          tableStyle={{ backgroundColor: '#fff' }}
+          tableStyle={{ backgroundColor: '#0000' }}
           striped
           trStyle={props.trStyle}
     >{props.children}</BootstrapTable>

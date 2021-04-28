@@ -17,8 +17,13 @@ class home extends Component {
       logOutButtonStatus: 'warning',
       logOutLoadingMessage: 'Log Out',
       logOutLoading: false,
-      name: getFromStorage('the_login_n_signup').name,
-      email: getFromStorage('the_login_n_signup').email,
+      firstName: getFromStorage('the_login_n_signup').firstName,
+      lastName: getFromStorage('the_login_n_signup').lastName,
+      atelierType: getFromStorage('the_login_n_signup').atelierType,
+      /* -----------------------Rôle------------------------------------- */
+      role: getFromStorage('the_login_n_signup').role,
+      url: getFromStorage('the_login_n_signup').url,
+     email: getFromStorage('the_login_n_signup').email,
       token: getFromStorage('the_login_n_signup').token,
       usersTable: [{}],
     }
@@ -36,7 +41,7 @@ class home extends Component {
       })
       .then(json => {
         if (json.success) {
-          setInStorage('the_login_n_signup', { token: '', name: '' });
+          setInStorage('the_login_n_signup', { token: '', firstName: '' });
           browserHistory.push('/login')
         } else {
           this.setState({
@@ -50,7 +55,7 @@ class home extends Component {
     return (
       <div>
         {(obj && obj.token) ?
-            <div style={{ textAlign: '-webkit-center' }}><h1>Welcome {this.state.name}!</h1>
+            <div style={{ textAlign: '-webkit-center' }}><h1>Welcome {this.state.firstName}!</h1>
               <Button
                 style={{ width: '100px' }}
                 block

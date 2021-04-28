@@ -10,6 +10,7 @@ import browserHistory from '../Router/browserHistory';
 import './SideMenu.scss';
 
 function logOutClicked () {
+ 
   fetch(RESTAPIUrl + '/api/account/logout?token=' + getFromStorage('the_login_n_signup').token)
     .then(res => {
       return res.json();
@@ -24,11 +25,15 @@ function logOutClicked () {
     });
 }
 const SideMenu = ({ open, onItemClick }) => (
+  
   <div className={open ? 'SideMenu open' : ''}>
+    
     <ul>
       {
-        SIDE_MENU_ROUTES
-          .map(item => (
+        
+
+        SIDE_MENU_ROUTES.map(item => (
+            
             <li key={item.label} className="menuItem">
               {
                 item.external
