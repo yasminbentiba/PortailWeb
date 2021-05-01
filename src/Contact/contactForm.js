@@ -29,25 +29,25 @@ export default function ContactUs() {
       <div className="drop">
         <div className="container" style={{display:'contents' }}>
           <h2 className="drop-title">
-            <span> Contact </span>
+            <span className="contactspan"> Contact </span>
           </h2>
           <form className="contactform" onSubmit={sendEmail}>
             <div className="form-input">
-              <input id="name"type="text" placeholder="Écrire votre nom" name="name" required/>
-              <input id="email"autoComplete="email" type="email" placeholder="Écrire votre email" name="email" required />
+              <input className="inputContact" id="name"type="text" placeholder="Écrire votre nom" name="name" required/>
+              <input className="inputContact" id="email"autoComplete="email" type="email" placeholder="Écrire votre email" name="email" required />
             </div>
-            <input id="hidden" type="hidden" name="contact_number" />
-            <input
+            <input className="inputContact" id="hidden" type="hidden" name="contact_number" />
+            <input className="inputContact sub"
             id="subject"
             autoComplete="Subject"
-            className="sub"
+            
               type="text"
               placeholder="Écrire votre sujet"
               name="subject"
               required
             />
-            <textarea id="message" cols="30" rows="10" name="message" placeholder="Comment nous pouvons vous aider !" required/>
-            <input type="submit" value="Send" />
+            <textarea className="textareaContact" id="message" cols="30" rows="10" name="message" placeholder="Comment nous pouvons vous aider !" required/>
+            <input className="inputContact" type="submit" value="Send" />
           </form>
         </div>
       </div>

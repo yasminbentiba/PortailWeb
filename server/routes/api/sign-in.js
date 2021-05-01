@@ -72,6 +72,7 @@ module.exports = (app) => {
                                 token: doc._id,
                                 name: user.name,
                                 firstName : user.firstName,
+                                user:user,
                                 role : user.role,
                                 respId: 'LIS',
                             });

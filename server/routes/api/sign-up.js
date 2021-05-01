@@ -43,6 +43,7 @@ module.exports = (app) => {
                     newUser.name = req.body.name;
                     newUser.firstName = req.body.firstName;
                     newUser.lastName = req.body.lastName;
+                    newUser.atelierName=req.body.atelierName;
                     newUser.url=req.body.url;
                     newUser.role = req.body.role;
                     newUser.atelierType = req.body.atelierType;

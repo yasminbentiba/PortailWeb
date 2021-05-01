@@ -31,6 +31,7 @@ class UsersTable extends Component {
         <TableHeaderColumn dataField="userEmail" dataAlign="center">email</TableHeaderColumn>
         <TableHeaderColumn dataField="userRole" dataAlign="center">Role</TableHeaderColumn>
         <TableHeaderColumn dataField="userAtelierType" dataAlign="center">Type d'atelier</TableHeaderColumn>
+        <TableHeaderColumn dataField="userAtelierName" dataAlign="center">Nom de l'atelier</TableHeaderColumn>
         <TableHeaderColumn dataField="userUrl" dataAlign="center">Site Web</TableHeaderColumn>
         <TableHeaderColumn dataField="signUpDate" dataAlign="center">signUp Date</TableHeaderColumn>
         <TableHeaderColumn dataField="userIsActivated" dataAlign="center">activé</TableHeaderColumn>

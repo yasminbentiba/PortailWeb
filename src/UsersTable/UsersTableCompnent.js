@@ -103,6 +103,7 @@ class UsersTableCompnent extends Component {
       userLastName: user.lastName,
       userRole: user.role,
       userAtelierType: user.atelierType,
+      userAtelierName: user.atelierName,
       userUrl: user.url,
       userIsActivated:user.isActivated,
       signUpDate: user.signUpDate ,

@@ -1,0 +1,154 @@
+.annuaire {
+    display: flex;
+    height: auto;
+    padding: 1% 1% 2% 1% ;
+    margin: 0% 0% 0% 0%;
+    overflow: hidden;
+    border-radius: 1%;
+    border:solid 1px #c5c2baef;
+    justify-content: center;
+    box-shadow: 1px 2px 3px #1d180cef ;
+}
+
+
+.part {
+    float: left;
+    padding: 20px 0;
+    border: 1px solid #888;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 0%;
+    padding-right: 5%;
+    margin-top: 1%;
+    margin-bottom: 1px;
+    padding:10px;
+    justify-content: center;
+    box-shadow: 1px 2px 3px #1d180cef ;
+    overflow: hidden;
+    border-radius: 5%;
+    border:solid 1px #c5c2baef;
+    height: 300px;
+    min-height: 200px;
+  width: 200px;
+}
+.part-title {
+    font-size: 25px;
+    color: #498fdd;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-shadow: 4px -3px 5px #bbb2b2;
+}
+
+ .line {
+    width: 60%;
+    margin: auto;
+}
+
+ .part-desc {
+    font-size: 14px;
+    color: #888;
+    padding-top: 10px;
+}
+
+ @media (min-width: 345px )and(max-width:747px) {
+    .annuaire  {
+        width: 100%;
+        float: none;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        display: contents;
+        font-size: 30px;
+        
+    }
+    .part{
+        float: none;
+        display: ruby-text-container;
+        margin: auto;
+        margin-top: 7px;
+        padding: auto;
+        font-size: 30px;
+    }
+}
+
+
+
+@media only screen and (max-device-width: 480px) {
+    .annuaire  {
+        position:relative;
+        width: 100%;
+        float: none;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 5px;
+        padding-right: 5px;
+        display: contents;
+        
+    }
+   
+}
+
+ /* 
+@media (min-width: 50px )and (max-width:50px) {
+    .annuaire .part {
+        width: 47%;
+    }
+    
+    .annuaire .last {
+        margin-left: 0
+    }
+}
+ */
+
+
+
+
+ 
+
+/* ---------------------MODAL---------------------------------------------------------------- */
+/* Background effect. It covers the entire site */
+.modal {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Overlay effect: translucent background: black w/ partial opacity */
+    z-index: 1; /* Overlay effect: positioned over other containers */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    position: fixed; /* Fix position on the top-left corner*/
+    top: 50px;
+    left: 0;
+    overflow: auto; /* Enable scroll if needed */
+    padding-top: 80px; /* Location of the content container */
+}
+/* Modal content */
+.modal-content {
+    background-color: white;
+    width: 70%; /* Width in proportion to its parent container*/
+    max-width: 640px; /* Max width where it stops expanding */
+    overflow-y: auto;
+    height: 80vh; /* Height in proportion to its parent container */
+    margin: auto; /* Auto margin according to the element width */
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px; /* Optional. Rounds container corners */
+}
+/* Close button */
+.closeatelier {
+    color: rgb(255, 255, 255);
+    //text-shadow: rgb(255 255 255) 0px 1px 0px;
+    background-color: red;
+    width: 25px;
+    align-self: flex-end;
+    font-size: 20px  
+}
+
+.x{
+    padding: 5px;
+}
+
+.closeatelier:hover, 
+.closeatelier:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

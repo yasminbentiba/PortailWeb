@@ -19,11 +19,12 @@ class home extends Component {
       logOutLoading: false,
       firstName: getFromStorage('the_login_n_signup').firstName,
       lastName: getFromStorage('the_login_n_signup').lastName,
-      atelierType: getFromStorage('the_login_n_signup').atelierType,
+     email: getFromStorage('the_login_n_signup').email,
       /* -----------------------Rôle------------------------------------- */
       role: getFromStorage('the_login_n_signup').role,
+      atelierType: getFromStorage('the_login_n_signup').atelierType,
+      atelierName: getFromStorage('the_login_n_signup').atelierName,
       url: getFromStorage('the_login_n_signup').url,
-     email: getFromStorage('the_login_n_signup').email,
       token: getFromStorage('the_login_n_signup').token,
       usersTable: [{}],
     }

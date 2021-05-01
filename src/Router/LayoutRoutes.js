@@ -4,7 +4,9 @@ import Home from '../home/home';
 import Layout from '../Layout';
 import UsersTableCompnent from '../UsersTable/UsersTableCompnent';
 import Forum from "../Forum/forum";
-import contactForm from "../Contact/contactForm"
+import Annuaire from "../Annuaire/index";
+import contactForm from "../Contact/contactForm";
+import Profile from '../login/profile';
 
 
 
@@ -13,7 +15,9 @@ import {
   HOME,
   USERSTABLE,
   FORUM,
-  CONTACT
+  ATELIERTYPE,
+  CONTACT,
+  PROFILE
 } from './routes';
 
 const LayoutRoutes = () => (
@@ -22,7 +26,9 @@ const LayoutRoutes = () => (
       <Route exact path={HOME.route} component={Home} />
       <Route exact path={USERSTABLE.route} component={UsersTableCompnent} />
       <Route exact path={FORUM.route} component={Forum} />
+      <Route exact path={ATELIERTYPE.route} component={Annuaire} />
       <Route exact path={CONTACT.route} component={contactForm} />
+      <Route exact path={PROFILE.route} component={Profile} />
       <Redirect to={HOME.route} />
     </Switch>
   </Layout>

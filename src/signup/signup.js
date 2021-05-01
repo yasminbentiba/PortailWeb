@@ -22,6 +22,9 @@ class SignUp extends Component {
 
     this.handleChangeUrl = this.handleChangeUrl.bind(this);
 
+    
+    this.handleChangeAtelierName = this.handleChangeAtelierName.bind(this);
+
     this.handleChangeConfirm = this.handleChangeConfirm.bind(this);
 
     this.handleChangeFirstName = this.handleChangeFirstName.bind(this);
@@ -43,7 +46,6 @@ class SignUp extends Component {
     this.state = {
       password: "",
       email: "",
-      url: "",
       confPass: "",
       firstName: "",
       lastName: "",
@@ -52,16 +54,14 @@ class SignUp extends Component {
       user: true,
       prestataire: false,
       atelierType: "",
+      atelierName: "",
       isActivated: Boolean,
       signInLoading: false,
       show: false,
       signupStatus: "success",
       signUpMessage: "You have signed up successfully. Proceed to login.",
     };
-  }
-
-
-  
+  }  
 
   validateEmail() {
     if (this.state.email.length === 0) return null;
@@ -92,11 +92,12 @@ class SignUp extends Component {
     else return "error";
   }
 
-
-
-
   handleChange(e) {
     this.setState({ password: e.target.value });
+  }
+
+  handleChangeAtelierName(e) {
+    this.setState({ atelierName: e.target.value });
   }
 
   handleChangeEmail(e) {
@@ -162,13 +163,13 @@ class SignUp extends Component {
     };
 
    
-      fetch(RESTAPIUrl + "/api/account/isActivated", {
+     /*  fetch(RESTAPIUrl + "/api/account/isActivated", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({_}),
-      })
+      }) */
 
 
 
@@ -176,6 +177,8 @@ class SignUp extends Component {
    if ( newUser.role == "prestataire" ){
     newUser.atelierType =  this.state.atelierType  
     newUser.url = this.state.url 
+    newUser.atelierName = this.state.atelierName 
+
    }
 
     fetch(RESTAPIUrl + "/api/account/signup", {
@@ -203,6 +206,8 @@ class SignUp extends Component {
             user: this.state.user,
             prestataire: this.state.prestataire,
             atelierType: "",
+            atelierName: "",
+
           });
           browserHistory.push("/login");
         } else if (json.message === "Error: Server Error") {
@@ -220,6 +225,7 @@ class SignUp extends Component {
             user: true,
             prestataire: false,
             atelierType: "",
+            atelierName: "",
           });
         }
       });
@@ -272,7 +278,7 @@ class SignUp extends Component {
               />
               <FormControl.Feedback />
               <HelpBlock id="passwordHelp">
-                Password must be minimum 8 characters long
+               Le mot de passse doit contenir au minimum 8 caractère de longeur
               </HelpBlock>
             </FormGroup>
 
@@ -347,6 +353,21 @@ class SignUp extends Component {
                 <input type="file" id="myfile" name="myfile" />
                
                 <br />
+
+
+                <FormGroup
+              controlId="atelierName"
+              validationState={this.getValidationState()}
+            >
+              <FormControl
+                type="text"
+                value={this.state.atelierName}
+                placeholder="Nom De Votre atelier ..."
+                onChange={this.handleChangeAtelierName}
+                required
+              />
+              <FormControl.Feedback />
+            </FormGroup>
 
                 <FormGroup
               controlId="url"

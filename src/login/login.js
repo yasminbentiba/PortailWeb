@@ -86,11 +86,12 @@ class LogIn extends Component {
     }).then(res => res.json())
       .then(json => {
         if (json.success) {
-          setInStorage('the_login_n_signup', { token: json.token, firstName: json.firstName,role: json.role, email: email });
+          setInStorage('the_login_n_signup', { token: json.token, firstName: json.firstName, lastName: json.lastName,role: json.role, email: email ,user:json.user});
           this.setState({
             signInError: 'Welcome ' + json.firstName + '!',
             logInLoading: false,
             password: '',
+            lastName:'',
             email: '',
             token: json.token,
             show: true,

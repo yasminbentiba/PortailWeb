@@ -14,6 +14,7 @@
     "mongoose": "^5.4.4",
     "node-sass": "^4.14.1",
     "react": "^16.7.0",
+    "react-avatar": "^3.10.0",
     "react-bootstrap": "^0.32.4",
     "react-bootstrap-table": "^4.3.1",
     "react-dom": "^16.7.0",
@@ -28,7 +29,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "web-dev": "node server/server"
+    "web-dev": "nodemon server/server"
   },
   "browserslist": [
     ">0.2%",

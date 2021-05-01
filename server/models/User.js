@@ -65,8 +65,12 @@ const UserSchema = new mongoose.Schema({
       "pieceCarroserie",
       "pieceDetachee",
       "",
-
     ],
+    default: "",
+  },
+
+  atelierName: {
+    type: String,
     default: "",
   },
 

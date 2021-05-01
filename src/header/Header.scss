@@ -1,8 +1,8 @@
 
 .Header {
-  background: blue;
+  background-image: url(../images/nav.gif);
   display: flex;
-  justify-content: space-between;
+  justify-content: stretch;
   flex-grow: 1;
   flex-direction: row;
   align-items: stretch;
@@ -70,7 +70,7 @@
 
 
     &:hover {
-      background: blue
+      background: rgb(148, 171, 185)
     }
 
     &.open {
