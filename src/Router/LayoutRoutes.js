@@ -10,14 +10,13 @@ import Profile from '../login/profile';
 
 
 
-
 import {
   HOME,
   USERSTABLE,
   FORUM,
   ATELIERTYPE,
   CONTACT,
-  PROFILE
+  PROFILE,
 } from './routes';
 
 const LayoutRoutes = () => (
@@ -29,7 +28,9 @@ const LayoutRoutes = () => (
       <Route exact path={ATELIERTYPE.route} component={Annuaire} />
       <Route exact path={CONTACT.route} component={contactForm} />
       <Route exact path={PROFILE.route} component={Profile} />
+
       <Redirect to={HOME.route} />
+
     </Switch>
   </Layout>
 );

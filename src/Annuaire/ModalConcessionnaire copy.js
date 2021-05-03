@@ -1,34 +1,37 @@
-import React from "react";
-
-
+import React ,{Component} from "react";
 import { Image } from "react-bootstrap";
 import RESTAPIUrl from "../config/config";
-const ModalConcessionnaire = (props) => {
 
- /*  fetch(RESTAPIUrl + "/api/ateliertype", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({"atelierType":"atelierServiceRapide"}),
-    })
-      .then((res) => res.json())
-      .then((json) => {
-        console.log("json", json);
-      })
-     
- */
-  const divStyle = {
-    display: props.displayModal ? "block" : "none",
-  };
-  function closeModal(e) {
-    e.stopPropagation();
-    props.closeModal();
+/* 
+fetch(RESTAPIUrl + "/api/ateliertype", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({"atelierType":"atelierServiceRapide"}),
+})
+  .then((res) => res.json())
+  .then((json) => {
+    console.log("json", json);
+  }) */
+ 
+
+const divStyle = {
+display: props.displayModal ? "block" : "none",
+};
+function closeModal(e) {
+e.stopPropagation();
+props.closeModal();
+}
+
+export default class ModalConcessionnaire extends Component {
+  componentDidMount() {
+    
   }
 
-  
-  return (
-    <div className="modal" onClick={closeModal} style={divStyle}>
+  render() {
+    return (
+      <div className="modal" onClick={closeModal} style={divStyle}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <span className="closeatelier" onClick={closeModal}>
           <span className="x">&times;</span>
@@ -55,6 +58,6 @@ const ModalConcessionnaire = (props) => {
         </div>
       </div>
     </div>
-  );
-};
-export default ModalConcessionnaire;
+    );
+  }
+}

@@ -349,9 +349,13 @@ class SignUp extends Component {
                   </select>
                 </label>
                 <br /> <br />
-                <label for="myfile">Selectionnez votre logo ici :</label>
-                <input type="file" id="myfile" name="myfile" />
+                {/* <label for="myfile">Selectionnez votre logo ici :</label>
+                <input type="file" id="myfile" name="myfile" /> */}
                
+               <form action="/upload/photo" enctype="multipart/form-data" method="POST"> 
+  <input type="file" name="myImage" accept="image/*" />
+  <input type="submit" value="Upload Photo"/>
+</form>
                 <br />
 
 

@@ -124,7 +124,7 @@
 .modal-content {
     background-color: white;
     width: 70%; /* Width in proportion to its parent container*/
-    max-width: 640px; /* Max width where it stops expanding */
+    max-width: 640px; /* Max width where it .stops expanding */
     overflow-y: auto;
     height: 80vh; /* Height in proportion to its parent container */
     margin: auto; /* Auto margin according to the element width */
@@ -134,16 +134,19 @@
 }
 /* Close button */
 .closeatelier {
-    color: rgb(255, 255, 255);
-    //text-shadow: rgb(255 255 255) 0px 1px 0px;
+    color: white;
     background-color: red;
     width: 25px;
+    -webkit-align-self: flex-end;
     align-self: flex-end;
-    font-size: 20px  
+    font-size: 20px;
+    float: right;
+    border-radius: 10px;
+    border: 5px; 
 }
 
 .x{
-    padding: 5px;
+    padding: 0px;
 }
 
 .closeatelier:hover, 
@@ -152,3 +155,7 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+
+
+

@@ -16,8 +16,6 @@ class Header extends Component {
 
     return (
       <div className={containerClasses}>
-                
-
         <div className="actionsContainer">
           <a className={iconClasses} onClick={onMenuIconClick}>
             <i className="material-icons white menuIcon">{isMenuOpen ? 'close' : 'menu'}</i>

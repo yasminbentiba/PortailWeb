@@ -1,8 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App/App';
-import registerServiceWorker from './registerServiceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App/App";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import {ProductProvider} from "./Context";
+
+import registerServiceWorker from "./registerServiceWorker";
+
+
+ReactDOM.render(
+  <ProductProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </ProductProvider>,
+  document.getElementById("root")
+);
 registerServiceWorker();
