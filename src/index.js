@@ -3,17 +3,20 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App/App";
 
-import {ProductProvider} from "./Context";
+import {ProductProvider} from "./Forum/Context";
+import {PostProvider} from "./Forum/PostContext";
+
+
 
 import registerServiceWorker from "./registerServiceWorker";
 
 
 ReactDOM.render(
-  <ProductProvider>
-    <React.StrictMode>
+  <PostProvider>
+    <ProductProvider>
       <App />
-    </React.StrictMode>
-  </ProductProvider>,
+      </ProductProvider>
+  </PostProvider>,
   document.getElementById("root")
 );
 registerServiceWorker();

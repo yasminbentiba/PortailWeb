@@ -1,4 +1,5 @@
 import React from "react";
+import './forum.scss';
 const Modal = (props) => {
   const divStyle = {
     display: props.displayModal ? "block" : "none",
@@ -6,24 +7,26 @@ const Modal = (props) => {
   function closeModal(e) {
     e.stopPropagation();
     props.closeModal();
-  }
+  };
 
+  
   
   return (
     <div className="modal" onClick={closeModal} style={divStyle}>
-      <div  className="modal-contentforum" onClick={(e) => e.stopPropagation()}>
-        <span className="close" onClick={closeModal}>
-          <span className="x">&times;</span>
+      <div style={{
+    display: "inline-table"}} className="modal-main " onClick={(e) => e.stopPropagation()}>
+        <span className="close" style={{display: "block"}} onClick={closeModal}>
+          <span style={{display: "none"}} className="x">&times;</span>
         </span>
         
         <form  className ="sujetform" /* onSubmit={this.handleSubmit} */>
        
 
-       <div  className="row">
+       <div className="row">
          <div className="col-25">
-           <label className="labeltittresujet" for="titresujet">Titre Sujet</label>
+           <label className="labelsujet" for="titresujet">Titre Sujet</label>
          </div>
-         <div  className="col-75">
+         <div className="col-75">
            <input className="inputsujet"
              type="text"
              id="titresujet"
@@ -36,13 +39,13 @@ const Modal = (props) => {
          </div>
        </div>
 
-       <div  className="row">
-         <div  className="col-25">
-           <label  className="labelforum" for="subject">Description du Sujet</label>
+       <div className="row">
+         <div className="col-25">
+           <label className="labelsujet" for="subject">Description du Sujet</label>
          </div>
-         <div  className="col-75">
+         <div className="col-75">
            <textarea
-           className="textareamodalsujet"
+           className="textareasujet"
              id="subject"
              name="subject"/* 
              value={this.state.description}
@@ -57,13 +60,15 @@ const Modal = (props) => {
 
          <div className="row">
            <div className="col-25">
-             <label  className="labelforum" for="myfile">Votre logo</label>
+             <label className="labelsujet" for="myfile">Votre logo</label>
            </div>
-           <div  className="col-75 ">
+           <div className="col-75">
              <input 
-             className="addfilesujetinput"
-               type="file"
-              /* 
+             className="addfileinput inputsujet"
+             style={{marginRight:"0px"}}  
+             type="file"
+               id="myfile"
+               name="myfile"/* 
                value={this.state.image}
                onChange={this.handleChangeImage} */
                required
@@ -73,7 +78,7 @@ const Modal = (props) => {
          </div>
        
        <div className="row">
-         <input className="btnsubmitsujet" type="submit" value="Submit" />
+         <input className="inputsujet" type="submit" value="Submit" />
        </div>
      </form>
      </div>

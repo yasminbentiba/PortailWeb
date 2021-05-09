@@ -1,345 +1,79 @@
-.inner-main-body{
-    border-radius: 20px;
-    border:solid 1px #c5c2baef;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-left: 0px;
-    padding: 7px;
-    justify-content: end;
-    box-shadow: 1px 2px 3px #1d180cef ;
-    background-image:url('../images/crazycar.gif');
-
-    }
-
-
-
-
-    .media{
-        border-radius: 10px;
-        border:solid 1px #c5c2baef;
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-left: 0px;
-        padding: 7px;
-        justify-content: center;
-        box-shadow: 1px 2px 3px #1d180cef ;
-        background-color: #0000;
-    }
-    
-    
-    
-    
-
-
-
-    .search{
-        width: 50%;
-        border-radius: 20px;
-        border:solid 1px #c5c2baef;
-        margin-top: 0px;
-        margin-right: 35px;
-        margin-left: 35px;
-        padding: 7px;
-        display: flex;
-        justify-content: center;
-        box-shadow: 1px 2px 3px  ;
-    }
-    .page-item{
-        border-radius: 20%;
-        border:solid 1px #c5c2baef;
-        display: flex;
-        justify-content: center;
-        box-shadow: 1px 2px 3px #1d180cef ;
-    }
-    .searchselect{
-        width: 50%;
-    }
-    
-    
-    
-    .inner-wrapper {
-        position: relative;
-        height: calc(100vh - 3.5rem);
-        transition: transform 0.3s;
-    }
-
-
-    
-@media (min-width: 992px) {
-    
-    .sticky-navbar .inner-wrapper {
-        height: calc(100vh - 3.5rem - 48px);
-    }
+.TableForum {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align-last: center;
 }
 
+/* ------------------Custom Modal------------------ */
 
-
-
-
-.inner-main,
-.inner-sidebar {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-}
-.inner-sidebar {
-    left: 0;
-    width: 235px;
-    border-right: 1px solid #cbd5e0;
-    background-color: #fff;
-    z-index: 1;
-}
-.inner-main {
-    right: 0;
-    left: 235px;
-}
-.inner-main-footer,
-.inner-main-header,
-.inner-sidebar-footer,
-.inner-sidebar-header {
-    height: 3.5rem;
-    border-bottom: 1px solid #cbd5e0;
-    display: flex;
-    align-items: center;
-    padding: 0 1rem;
-    flex-shrink: 0;
-    margin-top: 40px;
-}
-.inner-main-body,
-.inner-sidebar-body {
-    padding: 1rem;
-    overflow-y: auto;
-    position: relative;
-    flex: 1 1 auto;
-}
-.inner-main-body .sticky-top,
-.inner-sidebar-body .sticky-top {
-    z-index: 999;
-}
-.inner-main-footer,
-.inner-main-header {
-    background-color: #ffffff0a;
-    margin-top: 40px;
-}
-.inner-main-footer,
-.inner-sidebar-footer {
-    border-top: 1px solid #cbd5e0;
-    border-bottom: 0;
-    height: auto;
-    min-height: 3.5rem;
-}
-@media (max-width: 767.98px) {
-    .inner-sidebar {
-        left: -235px;
-    }
-    .inner-main {
-        left: 0;
-    }
-    .inner-expand .main-body {
-        overflow: hidden;
-    }
-    .inner-expand .inner-wrapper {
-        transform: translate3d(235px, 0, 0);
-    }
-}
-
-.nav .show>.nav-link.nav-link-faded, .nav-link.nav-link-faded.active, .nav-link.nav-link-faded:active, .nav-pills .nav-link.nav-link-faded.active, .navbar-nav .show>.nav-link.nav-link-faded {
-    color: #3367b5;
-    background-color: #c9d8f0;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #467bcb;
-}
-.nav-link.has-icon {
-    display: flex;
-    align-items: center;
-}
-.nav-link.active {
-    color: #467bcb;
-}
-.nav-pills .nav-link {
-    border-radius: .25rem;
-}
-.nav-link {
-    color: #4a5568;
-}
-.card {
-    box-shadow: 0 1px 3px 0 rgba(245, 242, 242, 0.952), 0 1px 2px 0 rgba(245, 242, 242, 0.959);
-}
-
-.card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: rgba(245, 243, 243, 0.712);
-    background-clip: border-box;
-    border: 0 solid rgba(0,0,0,.125);
-    border-radius: .25rem;
-    margin: 10px;
-}
-
-.card-body {
-    flex: 1 1 auto;
-    min-height: 1px;
-    
-}
-
-
-body{
-    margin-top:20px;
-    color: #f9f9fa;
-    text-align: left;
-    background-color: #0000;    
-}
-
-
-
-
-/* Modal content */
-.modal-contentforum {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+.modal {
+    position: fixed;
+    top: 5%;
+    left: 10%;
     width: 100%;
-    pointer-events: auto;
-    background-color: #ffff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,0);
-    border-radius: .3rem;
-    outline: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
 }
-/* Close button */
-.close {
-    color: rgb(255, 255, 255);
-    //text-shadow: rgb(255 255 255) 0px 1px 0px;
-    background-color: red;
-    width: 25px;
-    align-self: flex-end;
-    font-size: 20px  
+.inputsujet,
+.textareasujet {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
 }
-
-.x{
-    padding: 5px;
+.addfileinput{
+    
+    display: initial;
 }
-
-.close:hover, 
-.close:focus {
-    color: #000;
-    text-decoration: none;
+.inputsujet[type="submit"] {
+    margin-top: 5%;
+    background-color: #1f73e0;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-}
-
-
-/* --------ajout sujet-------- */
-.textareamodalsujet, .addfilesujetinput, .inputsujet{
-    width: 90%;
-    margin-top: 0;
-    border-radius: 5px;
-    border: solid 1px #c5c2baef;
-    margin-top: 5px;
-    margin-right: 5%;
-    margin-left: 5%;
-    padding: auto;
+    padding: 7px;
     justify-content: center;
     box-shadow: 1px 2px 3px #1d180cef;
-    background-color: #ffff;
 }
-  
- .searchselect, .forminput {
 
-    border-radius: 20px;
-    border: solid 1px #c5c2baef;
-    margin-bottom: 10px;
-    margin-right: 43px;
-    margin-left: -24px;
-    padding: 5px;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    box-shadow: 1px 2px 3px;
-    margin-bottom: 10px;
-    width: 101px;
-    
-  }
-
-  .labelforum {
+.inputsujet[type="submit"]:hover {
+    background-color: #007bff;
+}
+.labelsujet {
     padding: 12px 12px 12px 0;
     display: inline-block;
-  }
+}
 
- 
- .btnsubmitsujet{
-
-
-
-    width: 50%;
-    margin-top: 0;
-    border-radius: 5px;
-    border: solid 1px #c5c2baef;
-    margin-top: 5px;
-    margin-right: 5%;
-    margin-left: 30%;
-    padding: auto;
-    justify-content: center;
-    box-shadow: 1px 2px 3px #1d180cef;
-    background-color: #ffff;
-
-    color: rgb(2, 3, 3);
-    cursor: pointer;
- }
- .btnsubmitsujet:hover {
-   background-color: #14969b;
- }
- 
- .simplebar-content-wrapper{
-     padding: 15px;
- }
- .sujetform{
-       border-radius: 20px;
-   border: solid 1px #c5c2baef;
-   margin-top: 160px;
-   margin-right: 25%;
-   margin-left: 25%;
-   padding: 30px;
-   justify-content: center;
-   box-shadow: 1px 2px 3px #1d180cef;
-   background-color: #ffff;
- }
+.modal-main {
+    background-color: white;
+    width: 70%;
+    max-width: 640px;
+    overflow-y: auto;
+    height: 80vh;
+    margin: 20px 50px auto 50px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
 
 
- 
- .col-25 {
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-  }
-  
-  .col-75 {
-    float: left;
-    width: 75%;
-    margin-top: 6px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-   
-  
+.display-none {
+    display: none;
+}
+@media (min-width: 768px){
+.forumcontainer {
+    width: 750px;
+}
+}
 
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .col-25, .col-75, .inputsujet ,.textareamodalsujet, .addfileinput{
-      width: 100%;
-      margin-top: 0;
-    }
-  }
+@media (min-width: 300px){
+    .forumcontainer {
+        width: 750px;
+        display: contents;
+    } 
+}

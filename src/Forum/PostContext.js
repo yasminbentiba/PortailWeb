@@ -1,16 +1,15 @@
 import React, { Component } from "react";
-import { rowData } from "./appData";
+import { rowData } from "./postData";
 
 const ProductContext = React.createContext();
 
-class ProductProvider extends Component {
+class PostProvider extends Component {
   state = {
     Alldata: rowData,
     id: "",
-    title: "",
-    info: "",
-    price: "",
-    company: "",
+    image: "",
+    commentaire: "",
+
     updateEdit: [],
   };
 
@@ -25,35 +24,30 @@ class ProductProvider extends Component {
     const selectedRecordt = tempProduct[index];
     this.setState({
       id: selectedRecordt["id"],
-      title: selectedRecordt["title"],
-      info: selectedRecordt["info"],
-      price: selectedRecordt["price"],
-      company: selectedRecordt["company"],
+      image: selectedRecordt["image"],
+      commentaire: selectedRecordt["commentaire"],
+     
     });
   };
-
+  onDelete=(id)=>{
+    const tempProduct=this.state.Alldata.filter(item=> item.id != id);
+    this.setState({
+      Alldata: tempProduct 
+    })
+      }
   updateValue = (e, test) => {
-    if (test === "title") {
-      this.state.title = e.target.value;
+    if (test === "image") {
+      this.state.image = e.target.value;
     }
 
-    if (test === "info") {
-      this.state.info = e.target.value;
+    if (test === "commentaire") {
+      this.state.commentaire = e.target.value;
     }
 
-    if (test === "price") {
-      this.state.price = e.target.value;
-    }
-
-    if (test === "company") {
-      this.state.company = e.target.value;
-    }
 
     const tempArr = [
-      this.state.title,
-      this.state.info,
-      this.state.price,
-      this.state.company
+      this.state.image,
+      this.state.commentaire,
     ];
     this.setState({
       updateEdit: tempArr,
@@ -65,26 +59,22 @@ class ProductProvider extends Component {
       const SavedRecord = this.state.Alldata;
       const index = SavedRecord.indexOf(this.getRecord(id));
       const Record = SavedRecord[index];
-      Record['title']=this.state.updateEdit[0],
-      Record['info']=this.state.updateEdit[1],
-      Record['price']=this.state.updateEdit[2],
-      Record['company']=this.state.updateEdit[3];
+      Record['image']=this.state.updateEdit[0],
+      Record['commentaire']=this.state.updateEdit[1],
 
       this.setState({
           Alldata:[...this.state.Alldata],
-          id:"", title:"",info:"",price:"",company:""
+          id:"", image:"",commentaire:""
       })
     } else {
         const MaxId=Math.max(...this.state.Alldata.map(item=>item.id));
         const id=MaxId+1;
         const newArr =[];
-        newArr['title']=this.state.updateEdit[0];
-        newArr['info']=this.state.updateEdit[1];
-        newArr['price']=this.state.updateEdit[2];
-        newArr['company']=this.state.updateEdit[3];
+        newArr['image']=this.state.updateEdit[0];
+        newArr['commentaire']=this.state.updateEdit[1];
         this.setState({
             Alldata:[...this.state.Alldata,newArr],
-            id:"", title:"",info:"",price:"",company:""
+            id:"", image:"",commentaire:""
         })
 
     }
@@ -98,7 +88,8 @@ class ProductProvider extends Component {
          value={{ ...this.state,
           onEdit: this.onEdit,
           updateValue:this.updateValue,
-          onSave: this.onSave}}>
+          onSave: this.onSave,
+          onDelete:this.onDelete}}>
           {this.props.children}
         </ProductContext.Provider>
       </div>
@@ -108,4 +99,4 @@ class ProductProvider extends Component {
 
 const ProductConsumer = ProductContext.Consumer;
 
-export { ProductProvider, ProductConsumer };
+export { PostProvider, ProductConsumer };

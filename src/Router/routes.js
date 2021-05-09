@@ -7,6 +7,8 @@ export const ATELIERTYPE = { route: '/atelierType', label: 'Annuaire des prestat
 export const FORUM = { route: '/forum', label: 'Forum' };
 export const CONTACT={route:'/contactForm', label:'Nous Contacter !'};
 export const PROFILE={route:'/profile', label:'Profile'};
+export const POST={route:'/post', label:'Post'};
+
 
 export const SIDE_MENU_ROUTES = [
   HOME,
@@ -16,7 +18,8 @@ export const SIDE_MENU_ROUTES = [
   ATELIERTYPE,
   FORUM,
   true? CONTACT: null,
-  PROFILE
+  PROFILE,
+  
 ];
 export const LAYOUT_ROUTES = [
   HOME,
@@ -27,4 +30,6 @@ export const LAYOUT_ROUTES = [
   FORUM,
   CONTACT,
   PROFILE,
+  POST
+  
 ];

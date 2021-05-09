@@ -22,7 +22,6 @@ class SignUp extends Component {
 
     this.handleChangeUrl = this.handleChangeUrl.bind(this);
 
-    
     this.handleChangeAtelierName = this.handleChangeAtelierName.bind(this);
 
     this.handleChangeConfirm = this.handleChangeConfirm.bind(this);

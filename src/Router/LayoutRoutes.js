@@ -7,6 +7,7 @@ import Forum from "../Forum/forum";
 import Annuaire from "../Annuaire/index";
 import contactForm from "../Contact/contactForm";
 import Profile from '../login/profile';
+import Post from '../Forum/post';
 
 
 
@@ -17,6 +18,7 @@ import {
   ATELIERTYPE,
   CONTACT,
   PROFILE,
+  POST
 } from './routes';
 
 const LayoutRoutes = () => (
@@ -28,6 +30,10 @@ const LayoutRoutes = () => (
       <Route exact path={ATELIERTYPE.route} component={Annuaire} />
       <Route exact path={CONTACT.route} component={contactForm} />
       <Route exact path={PROFILE.route} component={Profile} />
+      <Route exact path={POST.route} component={Post} />
+
+
+      
 
       <Redirect to={HOME.route} />
 
