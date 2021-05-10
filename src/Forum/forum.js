@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import Modal from './Modal'
 import "./forum.scss";
 import { Button } from "react-bootstrap";
 
@@ -28,8 +27,8 @@ class Forum extends Component {
         <div className="forumcontainer">
           <h3>Forum</h3>
 <br/>
+<a href="/addsujet">
 <button
-              onClick={ this.selectModal }
               style={{borderRadius: "20px"}}
                 className="btn btn-primary has-icon btn-block"
                 type="button"
@@ -53,13 +52,7 @@ class Forum extends Component {
                 </svg>
                 Nouveau Sujet
               </button>
-
-              <Modal
-              
-                 closeTimeoutMS={2000}
-                 displayModal={this.state.modal}
-                 closeModal={this.selectModal}
-             />
+</a>
 
               <br/>
           <ProductConsumer>

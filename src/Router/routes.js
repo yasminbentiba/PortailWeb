@@ -8,6 +8,7 @@ export const FORUM = { route: '/forum', label: 'Forum' };
 export const CONTACT={route:'/contactForm', label:'Nous Contacter !'};
 export const PROFILE={route:'/profile', label:'Profile'};
 export const POST={route:'/post', label:'Post'};
+export const ADDSUJET={route:'/addsujet', label:'Add sujet'};
 
 
 export const SIDE_MENU_ROUTES = [
@@ -28,6 +29,7 @@ export const LAYOUT_ROUTES = [
   LOGIN,
   ATELIERTYPE,
   FORUM,
+  ADDSUJET,
   CONTACT,
   PROFILE,
   POST
