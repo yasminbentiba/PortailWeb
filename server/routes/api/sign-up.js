@@ -48,6 +48,7 @@ module.exports = (app) => {
                     newUser.role = req.body.role;
                     newUser.atelierType = req.body.atelierType;
                     newUser.isActivated=req.body.isActivated;
+                    newUser.logo_id = req.body.logo_id
 
                     newUser.save((err, user) => {
                         if(err) {

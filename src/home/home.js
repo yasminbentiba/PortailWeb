@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './home.scss';
+/* import './home.scss'; */
 import { Image } from "react-bootstrap";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
@@ -82,7 +82,7 @@ class home extends Component {
               disabled={this.state.logOutLoading}
               onClick={this.state.logOutLoading ? null : this.logOutClicked}
             >
-              {this.state.logOutButtonStatus ? 'Log Out' : 'Logging Out'}
+              {this.state.logOutButtonStatus ? 'Se déconnecter ' : 'Logging Out'}
             </Button>
 
             {/* -----------------------------slide--------------------- */}

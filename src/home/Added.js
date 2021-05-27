@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './home.scss';
+/* import './home.scss'; */
+import "https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css";
 import {
     Button
 } from 'react-bootstrap';

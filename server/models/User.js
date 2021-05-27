@@ -47,6 +47,7 @@ const UserSchema = new mongoose.Schema({
     default: "",
     required: true,
   },
+  logo_id : Number,
 
   position: {
     latitude: { type: String },
@@ -59,7 +60,7 @@ const UserSchema = new mongoose.Schema({
       "atelierMecanique",
       "atelierElectrique",
       "atelierTolerie",
-      "concessionnaire",
+      "Concession automobile",
       "atelierTeinture",
       "atelierServiceRapide",
       "pieceCarroserie",

@@ -1,34 +1,34 @@
 const mongoose = require('mongoose');
 const Commentaire = require('./Commentaire');
 
-const SujetSchema = new mongoose.Schema({
+// const SujetSchema = new mongoose.Schema({
     
-    //date de creation du sujet 
-    date:{
-        type : Date,
-        value : Date.now()
-    },
+//     //date de creation du sujet 
+//     date:{
+//         type : Date,
+//         value : Date.now()
+//     },
 
-    userId: {
-        type: String
-    },
+//     userId: {
+//         type: String
+//     },
 
-//on a besoin du longeur du tableau msg (nb de réponse) et nb de vue
+// //on a besoin du longeur du tableau msg (nb de réponse) et nb de vue
 
 
-//les id des messages
-    messageIds: {
-        type: [Commentaire]
+// //les id des messages
+//     messageIds: {
+//         type: [Commentaire]
    
 
-    },
+//     },
 
-    image:{
-        type:String
-    }
+//     image:{
+//         type:String
+//     }
 
-    //dernier msg =message[length] nekhdhou mennou l user w date
-});
+//     //dernier msg =message[length] nekhdhou mennou l user w date
+// });
 
 //pour exporter le modéle :besh nasen3oulou methode
-module.exports = mongoose.model('Sujet', SujetSchema);
+// module.exports = mongoose.model('Sujet', SujetSchema);

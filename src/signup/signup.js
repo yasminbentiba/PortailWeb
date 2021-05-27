@@ -59,6 +59,9 @@ class SignUp extends Component {
       show: false,
       signupStatus: "success",
       signUpMessage: "You have signed up successfully. Proceed to login.",
+
+
+
     };
   }  
 
@@ -177,9 +180,9 @@ class SignUp extends Component {
     newUser.atelierType =  this.state.atelierType  
     newUser.url = this.state.url 
     newUser.atelierName = this.state.atelierName 
-
+     
    }
-
+   newUser.logo_id =  Math.floor( Math.random() * 17)  
     fetch(RESTAPIUrl + "/api/account/signup", {
       method: "POST",
       headers: {
@@ -206,6 +209,7 @@ class SignUp extends Component {
             prestataire: this.state.prestataire,
             atelierType: "",
             atelierName: "",
+           
 
           });
           browserHistory.push("/login");
@@ -238,7 +242,7 @@ class SignUp extends Component {
               <FormControl
                 type="text"
                 value={this.state.firstName}
-                placeholder="First Name"
+                placeholder="Nom"
                 onChange={this.handleChangeFirstName}
               />
             </FormGroup>
@@ -247,7 +251,7 @@ class SignUp extends Component {
               <FormControl
                 type="text"
                 value={this.state.lastName}
-                placeholder="Last Name"
+                placeholder="Prénom"
                 onChange={this.handleChangeLastName}
               />
             </FormGroup>
@@ -303,7 +307,7 @@ class SignUp extends Component {
                     onChange={this.handleChangeRadio}
                     style={{ marginRight: "10px" }}
                   />
-                  Internaute
+                  Utilisateur
                 </label>
 
                 <label style={{ marginLeft: "40px" }}>
@@ -330,13 +334,15 @@ class SignUp extends Component {
                     value={this.state.value}
                     onChange={this.handleChangeSelect}
                     className="transparence"
+                    required
                   >
+                    <option>Selectionnez le type de votre atelier</option>
                     <option value="atelierMecanique">Atelier mécanique</option>
                     <option value="atelierElectrique">
                       Atelier atelier électrique
                     </option>
                     <option value="atelierTolerie">Atelier tolerie</option>
-                    <option value="concessionnaire">Concessionnaire </option>
+                    <option value="Concession automobile">Concession automobile </option>
                     <option value="atelierTeinture">
                       Atelier peinture auto
                     </option>
@@ -350,11 +356,11 @@ class SignUp extends Component {
                 <br /> <br />
                 {/* <label for="myfile">Selectionnez votre logo ici :</label>
                 <input type="file" id="myfile" name="myfile" /> */}
-               
+              {/*  
                <form action="/upload/photo" enctype="multipart/form-data" method="POST"> 
   <input type="file" name="myImage" accept="image/*" />
   <input type="submit" value="Upload Photo"/>
-</form>
+</form> */}
                 <br />
 
 
@@ -365,7 +371,7 @@ class SignUp extends Component {
               <FormControl
                 type="text"
                 value={this.state.atelierName}
-                placeholder="Nom De Votre atelier ..."
+                placeholder="Nom De Votre atelier*"
                 onChange={this.handleChangeAtelierName}
                 required
               />
@@ -379,8 +385,9 @@ class SignUp extends Component {
               <FormControl
                 type=""
                 value={this.state.url}
-                placeholder="Website Url"
+                placeholder=" Url de votre site web*"
                 onChange={this.handleChangeUrl}
+                required
               />
               <FormControl.Feedback />
             </FormGroup>
@@ -397,12 +404,12 @@ class SignUp extends Component {
               disabled={this.state.signInLoading}
               onClick={this.state.signInLoading ? null : this.signUpClicked}
             >
-              {this.state.signInLoading ? "Processing..." : "Sign Up"}
+              {this.state.signInLoading ? "Processing..." : " s'inscrire"}
             </Button>
           </form>
 
           {this.state.show ? this.displayAlert() : null}
-          <a href="/login">already joined ?</a>
+          <a href="/login">avez-vous déjà un compte? se connecter.</a>
         </Col>
       </div>
     );

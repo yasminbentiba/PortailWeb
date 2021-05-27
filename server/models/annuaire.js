@@ -7,7 +7,7 @@ const AnnuaireSchema = new mongoose.Schema({
           "atelierMecanique",
           "atelierElectrique",
           "atelierTolerie",
-          "concessionnaire",
+          "Concession automobile",
           "atelierTeinture",
           "atelierServiceRapide",
           "pieceCarroserie",

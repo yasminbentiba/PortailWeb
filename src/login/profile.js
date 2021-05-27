@@ -66,7 +66,7 @@ class Profile extends Component {
                       className="nav-link active show"
                       data-toggle="tab"
                     >
-                      ABOUT
+                      A propos
                     </a>
                   </li>
                 </ul>
@@ -84,7 +84,7 @@ class Profile extends Component {
                         <table className="table table-profile">
                           <thead>
                             <tr>
-                              <th colspan="2">VOS INFORMATION</th>
+                              <th colspan="2">Informations Personnels</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -136,7 +136,7 @@ class Profile extends Component {
                           <table className="table table-profile">
                             <thead>
                               <tr>
-                                <th colspan="2">BASIC INFORMATION</th>
+                                <th colspan="2">Informations Personnels</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -178,19 +178,19 @@ class Profile extends Component {
                           <table className="table table-profile">
                             <thead>
                               <tr>
-                                <th colspan="2">BASIC Admin INFORMATION</th>
+                                <th colspan="2">Admin INFORMATION</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <td className="field">more info</td>
+                                <td className="field"></td>
                                 <td className="value">
                                   {this.state.atelierType}
                                 </td>
                               </tr>
 
                               <tr>
-                                <td className="field">more info</td>
+                                <td className="field"></td>
                                 <td className="value">
                                   {this.state.url}
                                 </td>

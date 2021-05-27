@@ -91,7 +91,7 @@ class Annuaire extends Component {
       <form>
         <div className="">
           <div>
-            <div className="container">
+           {/*  <div className="container">
               <div>
                 <select
                   style={{
@@ -116,9 +116,10 @@ class Annuaire extends Component {
                   />
                 </span>
               </div>
-            </div>
+            </div> */}
             <div className="App">
-              <button
+              {/*---------------------------- button test --------------------- */}
+              {/* <button
                 type="button"
                 // onClick={() => this.setState({atelierTypeForModal:"atelierTolerie"})  }
                 // onClick={this.showCustomModal }
@@ -129,7 +130,7 @@ class Annuaire extends Component {
                     this.showCustomModal
                   );
                 }}
-              ></button>
+              ></button> */}
               <CustomModal
                 show={this.state.showM}
                 handleClose={this.hideCustomModal}
@@ -215,7 +216,7 @@ class Annuaire extends Component {
                 </div>
                 <br />
                 <hr className="line" />
-                <p className="part-desc">Descpription Atelier Mécanique</p>
+                <p className="part-desc"> La réparation mécanique et la carrosserie auto</p>
               </div>
               <ModalElectrique
                 closeTimeoutMS={2000}
@@ -279,7 +280,7 @@ class Annuaire extends Component {
                 /* onClick={this.selectModalConcessionnaire} */
                 className="part-title"
               >
-                Concessionnaire
+                Concession automobile
               </h4>
 
               <CustomModal
@@ -302,7 +303,7 @@ class Annuaire extends Component {
               </div>
               <br />
               <hr className="line" />
-              <p className="part-desc">Descpription Concessionnaire</p>
+              <p className="part-desc">Descpription Concession automobile</p>
             </div>
 
             <ModalConcessionnaire
@@ -323,7 +324,7 @@ class Annuaire extends Component {
                 /*                 onClick={this.selectModalPieceCarroserie}
                  */ className="part-title"
               >
-                Piece Carroserie
+                Atelier Pièces Carroseries
               </h4>
 
               <CustomModal

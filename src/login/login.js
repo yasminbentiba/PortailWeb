@@ -135,7 +135,9 @@ class LogIn extends Component {
   }
   render() {
     return (
+      
       <div>
+        
         <Col xs={12} md={4}>
           <form>
             <FormGroup
@@ -162,7 +164,7 @@ class LogIn extends Component {
               <FormControl
                 type="password"
                 value={this.state.password}
-                placeholder="Password"
+                placeholder="Mot De Passe"
                 onChange={this.handleChange}
               />
               <FormControl.Feedback />
@@ -183,7 +185,7 @@ class LogIn extends Component {
           </Button>
 
           {this.state.show ? this.displayAlert() : null}
-          <a href="/signup">Create new account</a>
+          <a href="/signup">vous n'avez pas un compte? Créez un.</a>
         </Col>
       </div>
 

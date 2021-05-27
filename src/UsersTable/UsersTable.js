@@ -4,6 +4,7 @@ import { Badge, Button, ButtonGroup, Image, Label } from 'react-bootstrap';
 import { TableHeaderColumn } from 'react-bootstrap-table';
 import Tab from './Tab';
 
+
 import './UsersTable.js.scss';
 
 class UsersTable extends Component {
@@ -14,26 +15,26 @@ class UsersTable extends Component {
     }
 
   }
+  componentDidMount(){
+     
+  }
   render() {
     const { items } = this.props;
     return (
    <form>
-
-
-
-
+     
       <Tab
         items={items}
       >
         <TableHeaderColumn dataField="id" isKey hidden>ID</TableHeaderColumn>
-        <TableHeaderColumn dataField="userFirstName" dataAlign="center">First Name</TableHeaderColumn>
-        <TableHeaderColumn dataField="userLastName" dataAlign="center">Last Name</TableHeaderColumn>
+        <TableHeaderColumn dataField="userFirstName" dataAlign="center"> Nom</TableHeaderColumn>
+        <TableHeaderColumn dataField="userLastName" dataAlign="center">Prénom</TableHeaderColumn>
         <TableHeaderColumn dataField="userEmail" dataAlign="center">email</TableHeaderColumn>
-        <TableHeaderColumn dataField="userRole" dataAlign="center">Role</TableHeaderColumn>
+        <TableHeaderColumn dataField="userRole" dataAlign="center">Rôle</TableHeaderColumn>
         <TableHeaderColumn dataField="userAtelierType" dataAlign="center">Type d'atelier</TableHeaderColumn>
         <TableHeaderColumn dataField="userAtelierName" dataAlign="center">Nom de l'atelier</TableHeaderColumn>
         <TableHeaderColumn dataField="userUrl" dataAlign="center">Site Web</TableHeaderColumn>
-        <TableHeaderColumn dataField="signUpDate" dataAlign="center">signUp Date</TableHeaderColumn>
+        <TableHeaderColumn dataField="signUpDate" dataAlign="center">Date création</TableHeaderColumn>
         <TableHeaderColumn dataField="userIsActivated" dataAlign="center">activé</TableHeaderColumn>
         <TableHeaderColumn dataFormat={this.actionsFormatter} dataAlign="center" width="240">Actions</TableHeaderColumn>
       </Tab>

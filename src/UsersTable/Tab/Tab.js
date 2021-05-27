@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BootstrapTable } from 'react-bootstrap-table';
-
+import { Table } from "react-bootstrap";
 import './Tab.scss';
 
 class Tab extends Component {
@@ -11,7 +11,15 @@ class Tab extends Component {
   render() {
     const { props } = this;
     return (
-      <div className="table">
+      <Table
+      className=""
+      size="sm"
+      variant="dark"
+      stripted
+
+      hover
+      >
+        <tbody className="TableForum">
         <BootstrapTable
           data={props.items}
           remote={true}
@@ -20,7 +28,8 @@ class Tab extends Component {
           striped
           trStyle={props.trStyle}
     >{props.children}</BootstrapTable>
-      </div>
+      </tbody>
+      </Table>
     );
   }
 }
