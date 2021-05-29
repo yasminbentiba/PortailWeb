@@ -38,3 +38,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.rcw-conversation-container > .rcw-header {
+  background-color: red;
+}
+
+.rcw-message > .rcw-response {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(7, 3, 3);
+}

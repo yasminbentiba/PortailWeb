@@ -19,8 +19,6 @@ module.exports = (app) => {
         });
     } else {
         
-
-
         res.send({
             users : userss
         })

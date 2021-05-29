@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Phone from 'react-phone-number-input'
 import "./signup.scss";
 import {
   FormGroup,
@@ -15,6 +16,8 @@ import browserHistory from "../Router/browserHistory";
 class SignUp extends Component {
   constructor(props, context) {
     super(props, context);
+
+    this.handleChangePhone=this.handleChangePhone.bind(this);
 
     this.handleChange = this.handleChange.bind(this);
 
@@ -43,6 +46,7 @@ class SignUp extends Component {
     this.displayAlert = this.displayAlert.bind(this);
 
     this.state = {
+      phone:"",
       password: "",
       email: "",
       confPass: "",
@@ -93,6 +97,10 @@ class SignUp extends Component {
     else if (this.state.password === this.state.confPass) return "success";
     else return "error";
   }
+
+  handleChangePhone(e) {
+    this.setState({phone: e.target.value});
+ }
 
   handleChange(e) {
     this.setState({ password: e.target.value });
@@ -177,6 +185,7 @@ class SignUp extends Component {
 
 
    if ( newUser.role == "prestataire" ){
+     newUser.phone=this.state.phone
     newUser.atelierType =  this.state.atelierType  
     newUser.url = this.state.url 
     newUser.atelierName = this.state.atelierName 
@@ -195,6 +204,7 @@ class SignUp extends Component {
         console.log("json", json);
         if (json.message === "Signed Up") {
           this.setState({
+            phone:"",
             signInLoading: false,
             show: true,
             signupStatus: "success",
@@ -215,6 +225,7 @@ class SignUp extends Component {
           browserHistory.push("/login");
         } else if (json.message === "Error: Server Error") {
           this.setState({
+            phone:"",
             signInLoading: false,
             show: true,
             signupStatus: "danger",
@@ -235,9 +246,9 @@ class SignUp extends Component {
   }
   render() {
     return (
-      <div>
+      <div >
         <Col xs={12} md={4}>
-          <form>
+          <form className="signup">
             <FormGroup controlId="signUpFirstName">
               <FormControl
                 type="text"
@@ -362,6 +373,35 @@ class SignUp extends Component {
   <input type="submit" value="Upload Photo"/>
 </form> */}
                 <br />
+                <div
+            id="map-container"
+            className="rounded z-depth-1-half map-container"
+            style={{ height: "400px" }}
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d76765.98321148289!2d-73.96694563267306!3d40.751663750099084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1525939514494"
+              title="This is a unique title"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              style={{ border: 0 }}
+            />
+          </div>
+
+
+
+          <div><Phone
+		placeholder="Enter phone number"
+		value={ this.state.phone }
+		onChange={ phone => this.setState({ phone }) } /></div>
+ {/* 
+          <div class="form-group">
+  <label for="example-tel-input" >Telephone</label>
+  <div >
+    <input class="form-control" type="tel" value="1-(555)-555-5555" id="example-tel-input"/>
+  </div>
+</div>
+   */}
 
 
                 <FormGroup
@@ -371,7 +411,7 @@ class SignUp extends Component {
               <FormControl
                 type="text"
                 value={this.state.atelierName}
-                placeholder="Nom De Votre atelier*"
+                placeholder="Nom De Votre atelier"
                 onChange={this.handleChangeAtelierName}
                 required
               />

@@ -216,7 +216,7 @@ console.log({newFilteredSujets});
 
   
     return (
-      <div className="">
+      <div className="forum">
 
          
 
